@@ -27,6 +27,27 @@ ship_parts = [
         "Cost": 1,
         "Mandatory": True,
     },
+    {
+        "Name": "Laser Cannon",
+        "Tech Level": 1,
+        "Size": 3,
+        "Cost": 30,
+        "Mandatory": False,
+    },
+    {
+        "Name": "Point Defense System",
+        "Tech Level": 3,
+        "Size": 3,
+        "Cost": 90,
+        "Mandatory": False,
+    },
+    {
+        "Name": "Life Support System",
+            "Tech Level": 1,
+            "Size": 2,
+            "Cost": 20,
+            "Mandatory": True,
+        },
 ]
 
 
