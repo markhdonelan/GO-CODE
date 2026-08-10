@@ -14,25 +14,47 @@ ship_parts = [
         "Mandatory": False,
     },
     {
+        "Name": "3rd Gen ECM",
+        "Tech Level": 11,
+        "Size": 5,
+        "Cost": 100,
+        "Mandatory": False,
+    },
+    {
         "Name": "Cargo Bay",
         "Tech Level": 1,
         "Size": 1,
         "Cost": 1,
-        "Mandatory": False,
+        "Mandatory": True,
     },
 ]
 
 
 def main() -> None:
     print("Welcome to your Python game!")
-    answer = input("Do you want to play the game? ").strip().lower()
+    answer_game = input("Do you want to play the game? ").strip().lower()
 
-    if answer == "yes":
+    if answer_game == "yes":
         print("good!")
         print("Ship parts data:")
         print(ship_parts)
-        answer = input("Do you want to design a starship?").strip().lower()
-        if answer == "yes":
+
+        while True:
+            answer_design = input("What tech level is your starship? ").strip()
+            try:
+                answer_design = int(answer_design)
+                break
+            except ValueError:
+                print("Please enter a valid integer.")
+
+        print(f"Your starship tech level is {answer_design}.")
+
+        print("Matching ship parts:")
+        for part in ship_parts:
+            if part["Tech Level"] <= answer_design:
+                print(part)
+
+        if answer_design >= 1:
             print("ok let's do it!")
         else:
             print("ok we won't")
