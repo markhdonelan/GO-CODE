@@ -105,6 +105,11 @@ def main() -> None:
             if part["Tech Level"] <= answer_design:
                 print(part)
 
+        print("Matching ship hulls:")
+        for hull in ship_hulls:
+            if hull["Tech Level"] <= answer_design:
+                print(hull)
+                
         if answer_design >= 1:
             print("ok let's do it!")
         else:
