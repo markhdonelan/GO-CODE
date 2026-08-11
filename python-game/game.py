@@ -57,6 +57,26 @@ ship_parts = [
         },
 ]
 
+ship_hulls = [
+    {
+        "Name": "Corvette Hull",
+        "Tech Level": 1,
+        "Size": 12,
+        "Cost": 50,
+    },
+    {
+        "Name": "Friggate Hull",
+        "Tech Level": 2,
+        "Size": 20,
+        "Cost": 100,
+    },
+    {
+        "Name": "Destroyer Hull",
+        "Tech Level": 3,
+        "Size": 40,
+        "Cost": 200,
+    },
+]
 
 def main() -> None:
     print("Welcome to your Python game!")
@@ -66,6 +86,9 @@ def main() -> None:
         print("good!")
         print("Ship parts data:")
         print(ship_parts)
+
+        print("Ship hulls data:")
+        print(ship_hulls)   
 
         while True:
             answer_design = input("What tech level is your starship? ").strip()
