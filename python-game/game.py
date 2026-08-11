@@ -14,6 +14,13 @@ ship_parts = [
         "Mandatory": False,
     },
     {
+            "Name": "First Gen ECM",
+            "Tech Level": 5,
+            "Size": 3,
+            "Cost": 50,
+            "Mandatory": False,
+    },
+    {
         "Name": "3rd Gen ECM",
         "Tech Level": 11,
         "Size": 5,
